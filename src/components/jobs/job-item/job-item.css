@@ -9,65 +9,17 @@
   box-shadow: 0px 15px 20px -5px rgba(13, 113, 130, 0.15);
   border-radius: 0.25rem;
 }
-.jobItem-techTags {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 1rem;
-  margin-block-start: 1rem;
-}
-.jobItem-techTags span {
-  padding-inline: 0.5rem;
-  padding-block: 0.25rem;
-  border-radius: 0.25rem;
-  background-color: #effafa;
-  color: var(--desaturatedDarkCyan);
-  font-weight: bold;
-  line-height: 1.5rem;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
-  padding-block-start: 0.5rem;
-}
-.jobItem-techTags span:hover {
-  background-color: var(--desaturatedDarkCyan);
-  color: #effafa;
-}
+
 .jobItem hr {
   background-color: hsl(180, 10%, 74%);
 }
-.detail-place {
-  display: flex;
-  gap: 0.5rem;
-  margin-block-start: 0.5rem;
-  margin-block-end: 1rem;
-  color: #7c8f8f;
-  font-weight: 500;
-}
+
 .job-title {
   font-size: 15px;
   font-weight: bold;
   margin-block-start: 0.5rem;
 }
-.detail-heading {
-  margin-block-start: 0.5rem;
-  margin-block-end: 1rem;
-}
-.detail-heading .title {
-  margin-inline-end: 1rem;
-  color: var(--desaturatedDarkCyan);
-  font-weight: bold;
-}
-.detail-heading .tag {
-  margin-inline-end: 0.5rem;
-  padding: 0.5rem;
-  border-radius: 0.75rem;
-  color: var(--just-white);
-  font-size: 11px;
-  line-height: 14px;
-  font-weight: bold;
 
-  text-transform: uppercase;
-}
 .is-tag-green {
   background-color: var(--desaturatedDarkCyan);
 }
@@ -87,9 +39,7 @@
     grid-template-columns: 5.5rem 15.625rem 1fr;
     column-gap: 1.5rem;
   }
-  .jobItem-techTags {
-    justify-self: end;
-  }
+
   .jobItem-cover {
     position: initial;
   }

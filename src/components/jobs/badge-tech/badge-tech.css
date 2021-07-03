@@ -1,0 +1,29 @@
+.techTags {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-block-start: 1rem;
+}
+.techTags span {
+  padding-inline: 0.5rem;
+  padding-block: 0.25rem;
+  border-radius: 0.25rem;
+  background-color: #effafa;
+  color: var(--desaturatedDarkCyan);
+  font-weight: bold;
+  line-height: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  padding-block-start: 0.5rem;
+}
+.techTags span:hover {
+  background-color: var(--desaturatedDarkCyan);
+  color: #effafa;
+}
+
+@media screen and (min-width: 768px) {
+  .techTags {
+    justify-self: end;
+  }
+}
