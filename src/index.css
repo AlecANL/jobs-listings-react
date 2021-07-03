@@ -1,10 +1,18 @@
+:root {
+  --lightGrayishCyan: hsl(180, 52%, 96%);
+  --lightGrayishFilter: hsl(180, 31%, 95%);
+  --darkGrayishCyan: hsl(180, 8%, 52%);
+  --veryDarkGrayishCyan: hsl(180, 14%, 20%);
+  --desaturatedDarkCyan: hsl(180, 29%, 50%);
+  --just-white: #fff;
+  --bg_headerMobile: url('./assets/images/bg-header-mobile.svg');
+  --bg_headerDesktop: url('./assets/images/bg-header-desktop.svg');
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Spartan', sans-serif;
+  background-color: #effafa;
 }
 
 code {

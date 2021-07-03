@@ -1,0 +1,12 @@
+.header {
+  inline-size: 100%;
+  block-size: 9.75rem;
+  background-image: var(--bg_headerMobile);
+  background-color: var(--desaturatedDarkCyan);
+}
+
+@media screen and (min-width: 480px) {
+  .header {
+    background-image: var(--bg_headerDesktop);
+  }
+}
