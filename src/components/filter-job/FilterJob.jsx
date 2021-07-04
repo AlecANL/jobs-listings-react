@@ -20,7 +20,7 @@ function FilterJob() {
     jobsStore.setListJobs(jobsStore.currentData);
   }
   return (
-    <div className={`filterJob ${isVisible}`}>
+    <section className={`filterJob ${isVisible}`}>
       <div className="badges-section">
         {badgeStore.listBadges.map((badge, i) => (
           <BadgeSearched key={i} title={badge} />
@@ -31,7 +31,7 @@ function FilterJob() {
           Clear
         </button>
       </div>
-    </div>
+    </section>
   );
 }
 

@@ -1,8 +1,28 @@
 .detail-place {
-  display: flex;
-  gap: 0.5rem;
   margin-block-start: 0.5rem;
   margin-block-end: 1rem;
   color: #7c8f8f;
   font-weight: 500;
+}
+.detail-place ul {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.detail-place li {
+  display: flex;
+  align-items: center;
+}
+.detail-place li:not(:first-child)::before {
+  content: '•';
+  display: block;
+  margin-inline-end: 0.5rem;
+}
+@media screen and (max-width: 320px) {
+  .detail-place ul {
+    justify-content: center;
+  }
 }

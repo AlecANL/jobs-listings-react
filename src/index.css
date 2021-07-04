@@ -6,6 +6,8 @@
   --desaturatedDarkCyan: hsl(180, 29%, 50%);
   --buttonBgColor: #effafa;
   --just-white: #fff;
+
+  --just-black: #000;
   --bg_headerMobile: url('./assets/images/bg-header-mobile.svg');
   --bg_headerDesktop: url('./assets/images/bg-header-desktop.svg');
 }
