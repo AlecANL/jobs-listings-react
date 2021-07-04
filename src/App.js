@@ -11,8 +11,8 @@ function App() {
     <>
       <ContextStore>
         <ListJobsStore>
+          <Header />
           <Wrapper>
-            <Header />
             <FilterJob />
             <JobList />
           </Wrapper>
