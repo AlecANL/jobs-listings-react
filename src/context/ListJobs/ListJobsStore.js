@@ -10,19 +10,18 @@ const customData = data.map(job => {
 });
 
 function ListJobsStore({ children }) {
-  const [listJobs, setListJobs] = useState(customData);
+  const [customListJobs, setCustomListJobs] = useState([]);
 
-  function searchedByTag(tag) {
-    const newData = listJobs.filter(job => {
+  function searchedByTag(tag, list = customData) {
+    const newData = list.filter(job => {
       return job.tech_tags.includes(tag);
     });
-    console.log(newData);
-    setListJobs(newData);
+    setCustomListJobs(newData);
   }
   const values = {
-    listJobs,
-    setListJobs,
     searchedByTag,
+    customListJobs,
+    setCustomListJobs,
     currentData: customData,
   };
   return (

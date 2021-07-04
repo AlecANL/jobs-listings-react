@@ -11,13 +11,13 @@ function FilterJob() {
 
   useEffect(() => {
     if (badgeStore.listBadges.length <= 0) {
-      jobsStore.setListJobs(jobsStore.currentData);
+      jobsStore.setCustomListJobs(jobsStore.currentData);
     }
   }, [badgeStore.listBadges.length]); // eslint-disable-line react-hooks/exhaustive-deps
 
   function handleReset() {
     badgeStore.setListBadges([]);
-    jobsStore.setListJobs(jobsStore.currentData);
+    jobsStore.setCustomListJobs(jobsStore.currentData);
   }
   return (
     <section className={`filterJob ${isVisible}`}>
@@ -37,11 +37,13 @@ function FilterJob() {
 
 function BadgeSearched({ title }) {
   const badgeStore = useContext(ListContext);
-  // const jobsStore = useContext(ListJobsContext);
+  const { searchedByTag } = useContext(ListJobsContext);
 
   function handleDeleteBadge() {
     const newArr = badgeStore.listBadges.filter(badge => badge !== title);
+    console.log(newArr);
     badgeStore.setListBadges(newArr);
+    searchedByTag(newArr[newArr.length - 1]);
   }
   return (
     <button className="badge-searched" onClick={handleDeleteBadge}>
