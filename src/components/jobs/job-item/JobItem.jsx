@@ -20,7 +20,7 @@ function JobItem(props) {
           featured={props.featured}
           company={props.company}
         />
-        <div className="job-title">{props.position}</div>
+        <h3 className="job-title">{props.position}</h3>
         <BadgeTag tags={[props.contract, props.postedAt, props.location]} />
       </div>
       <hr />
