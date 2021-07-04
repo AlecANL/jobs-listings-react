@@ -1,23 +1,29 @@
 .techTags {
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 1rem;
   margin-block-start: 1rem;
 }
-.techTags span {
+.techTags button {
+  /* display: flex;
+  align-items: center; */
   padding-inline: 0.5rem;
   padding-block: 0.25rem;
   border-radius: 0.25rem;
+  border: none;
   background-color: #effafa;
   color: var(--desaturatedDarkCyan);
   font-weight: bold;
   line-height: 1.5rem;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
-  padding-block-start: 0.5rem;
 }
-.techTags span:hover {
+.techTags button:active {
+  transform: scale(0.97);
+}
+.techTags button:hover {
   background-color: var(--desaturatedDarkCyan);
   color: #effafa;
 }

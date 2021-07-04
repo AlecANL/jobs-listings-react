@@ -1,0 +1,82 @@
+.filterJob {
+  position: relative;
+  inset-block-start: -1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  box-sizing: border-box;
+  margin-inline-start: 1.5rem;
+  margin-inline-end: 1.5rem;
+  padding-block: 1.25rem;
+  padding-inline: 1.25rem;
+  background-color: var(--just-white);
+  border-radius: 0.3125rem;
+  box-shadow: 0px 15px 20px -5px rgba(13, 113, 130, 0.15);
+  transition: all 0.3s ease-in;
+}
+.filterJob.hidden {
+  opacity: 0;
+}
+.filterJob.visible {
+  opacity: 1;
+}
+.clear-section {
+  flex-shrink: 0;
+}
+.badges-section {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+.badges-section span {
+  padding-block: 0.25rem;
+  padding-inline: 0.5rem;
+  display: inline-block;
+}
+.badge-searched {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--desaturatedDarkCyan);
+  background-color: var(--buttonBgColor);
+  font-weight: bold;
+  padding-inline-end: 0;
+  border-radius: 0.3125rem;
+  overflow: hidden;
+}
+.filterJob button {
+  border: none;
+  cursor: pointer;
+}
+.filterJob img {
+  background-color: var(--desaturatedDarkCyan);
+  padding: 0.5rem;
+}
+.btn-clear {
+  background-color: unset;
+  font-size: 0.8125rem;
+  line-height: 1.5rem;
+  font-weight: bold;
+  color: #7c8f8f;
+  letter-spacing: 0.1px;
+}
+
+@supports not (padding-inline: 1.25rem) {
+  .filterJob {
+    padding-inline-start: 1.125rem;
+    padding-inline-end: 1.125rem;
+  }
+}
+@supports not (padding-block: 1.25rem) {
+  .filterJob {
+    padding-inline-start: 1.125rem;
+    padding-inline-end: 1.125rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .badges-section {
+    gap: 1rem;
+  }
+}

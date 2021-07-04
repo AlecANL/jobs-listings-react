@@ -1,25 +1,14 @@
-import { useState } from 'react';
-import data from 'assets/data.json';
+import { useContext } from 'react';
 import JobItem from '../job-item/JobItem';
+import ListJobsContext from 'context/ListJobs/ListJobsContext';
 import './job-list.css';
 
-const customData = data.map(job => {
-  return {
-    ...job,
-    tech_tags: [...job?.tools, job?.level, job?.role, ...job?.languages],
-  };
-});
-
 function JobList() {
-  const [listJobs] = useState(customData);
-  function filteringByTechTag(tag) {
-    return customData.filter(x => x.tech_tags.includes(tag));
-  }
-  console.log(filteringByTechTag('Senior'));
-  console.log(listJobs);
+  const listJobsStore = useContext(ListJobsContext);
+
   return (
     <main className="list-jobs">
-      {listJobs.map(job => (
+      {listJobsStore.listJobs.map(job => (
         <JobItem key={job.id} {...job} />
       ))}
     </main>
